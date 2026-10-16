@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Default (development)",
+      "description": "Development configuration",
+      "binaryDir": "${sourceDir}/build/default"
+    },
+    {
+      "name": "production",
+      "displayName": "Production",
+      "description": "Production configuration",
+      "binaryDir": "${sourceDir}/build/production"
+    }
+  ]
+}

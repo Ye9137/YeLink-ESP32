@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760">
+<rect width="1120" height="760" rx="24" fill="#0e1729"/>
+<g font-family="Arial, sans-serif">
+<text x="60" y="72" fill="#f5f8ff" font-size="34" font-weight="700">YeLink ESP32 · Wiring guide</text>
+<text x="60" y="110" fill="#a6b6cc" font-size="18">Logical connections only · Disconnect power before wiring</text>
+<rect x="60" y="150" width="330" height="510" rx="18" fill="#1b2a42"/>
+<rect x="730" y="150" width="330" height="510" rx="18" fill="#1b2a42"/>
+<text x="90" y="198" fill="#49d9f3" font-size="26" font-weight="700">ESP32</text>
+<text x="760" y="198" fill="#49d9f3" font-size="26" font-weight="700">ST7735 · 128 × 160</text>
+<text x="90" y="257" fill="#f5f8ff" font-size="22">GND</text>
+<circle cx="390" cy="250" r="5" fill="#a5b4c9"/>
+<path d="M390 250 H730" stroke="#a5b4c9" stroke-width="3" fill="none"/>
+<circle cx="730" cy="250" r="5" fill="#a5b4c9"/>
+<text x="760" y="257" fill="#f5f8ff" font-size="22">GND</text>
+<text x="90" y="308" fill="#f5f8ff" font-size="22">3V3</text>
+<circle cx="390" cy="301" r="5" fill="#f97373"/>
+<path d="M390 301 H730" stroke="#f97373" stroke-width="3" fill="none"/>
+<circle cx="730" cy="301" r="5" fill="#f97373"/>
+<text x="760" y="308" fill="#f5f8ff" font-size="22">VDD / VCC</text>
+<text x="90" y="359" fill="#f5f8ff" font-size="22">GPIO14</text>
+<circle cx="390" cy="352" r="5" fill="#ffcc66"/>
+<path d="M390 352 H730" stroke="#ffcc66" stroke-width="3" fill="none"/>
+<circle cx="730" cy="352" r="5" fill="#ffcc66"/>
+<text x="760" y="359" fill="#f5f8ff" font-size="22">SCL / SCK</text>
+<text x="90" y="410" fill="#f5f8ff" font-size="22">GPIO13</text>
+<circle cx="390" cy="403" r="5" fill="#55d9b5"/>
+<path d="M390 403 H730" stroke="#55d9b5" stroke-width="3" fill="none"/>
+<circle cx="730" cy="403" r="5" fill="#55d9b5"/>
+<text x="760" y="410" fill="#f5f8ff" font-size="22">SDA / MOSI</text>
+<text x="90" y="461" fill="#f5f8ff" font-size="22">GPIO25</text>
+<circle cx="390" cy="454" r="5" fill="#bb9cff"/>
+<path d="M390 454 H730" stroke="#bb9cff" stroke-width="3" fill="none"/>
+<circle cx="730" cy="454" r="5" fill="#bb9cff"/>
+<text x="760" y="461" fill="#f5f8ff" font-size="22">RST / RES</text>
+<text x="90" y="512" fill="#f5f8ff" font-size="22">GPIO26</text>
+<circle cx="390" cy="505" r="5" fill="#79b7ff"/>
+<path d="M390 505 H730" stroke="#79b7ff" stroke-width="3" fill="none"/>
+<circle cx="730" cy="505" r="5" fill="#79b7ff"/>
+<text x="760" y="512" fill="#f5f8ff" font-size="22">DC / A0</text>
+<text x="90" y="563" fill="#f5f8ff" font-size="22">GPIO27</text>
+<circle cx="390" cy="556" r="5" fill="#f7a3d6"/>
+<path d="M390 556 H730" stroke="#f7a3d6" stroke-width="3" fill="none"/>
+<circle cx="730" cy="556" r="5" fill="#f7a3d6"/>
+<text x="760" y="563" fill="#f5f8ff" font-size="22">CS</text>
+<text x="90" y="614" fill="#f5f8ff" font-size="22">3V3 → 100–220 Ω</text>
+<circle cx="390" cy="607" r="5" fill="#f4b96b"/>
+<path d="M390 607 H730" stroke="#f4b96b" stroke-width="3" fill="none"/>
+<circle cx="730" cy="607" r="5" fill="#f4b96b"/>
+<text x="760" y="614" fill="#f5f8ff" font-size="22">BLK / LED</text>
+<text x="60" y="704" fill="#f5f8ff" font-size="18">3.3 V supply · SCL/SDA are SPI signals here · Follow GPIO labels, not physical pin positions</text>
+<text x="60" y="734" fill="#a6b6cc" font-size="16">Backlight resistor: check your specific display module. Do not connect a bare 3.3 V display to VIN/5 V.</text>
+</g></svg>

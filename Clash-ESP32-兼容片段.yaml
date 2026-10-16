@@ -1,0 +1,12 @@
+# 供 ESP32 的 IPv4 热点排障时合并使用，不是完整的订阅或客户端配置。
+# 未自动写入或重载当前 Clash。请保留原有节点、认证信息和规则。
+# 将这些字段合并到现有同名段落；已有排除网段应保留并追加下面这一项。
+# 当前 ESP32 只共享 IPv4，本片段关闭客户端的 IPv6 出站/AAAA 解析。
+ipv6: false
+dns:
+  ipv6: false
+tun:
+  mtu: 1400
+  auto-detect-interface: true
+  route-exclude-address:
+    - 192.168.4.0/24

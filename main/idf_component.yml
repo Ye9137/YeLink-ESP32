@@ -1,0 +1,3 @@
+# ESP-IDF 6.x 已移除内置 json，改由组件管理器下载官方 cJSON 组件。
+dependencies:
+  espressif/cjson: "^1.7.19"

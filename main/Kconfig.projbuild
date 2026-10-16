@@ -1,0 +1,57 @@
+# Copyright (c) 2026 Ye；不同模块和杜邦线可选择不同传输频率。
+menu "Ye display"
+config YE_LCD_SPI_MHZ
+    int "ST7735 SPI clock (MHz)"
+    range 1 80
+    default 27
+    help
+        Requested SPI clock. Hardware may round to a supported divider.
+        ESP32 supports up to 80 MHz; the attached panel and wiring may not.
+        If pixels corrupt on long wires, try 20 or 10 MHz.
+config YE_LCD_TARGET_FPS
+    int "Animation target FPS"
+    range 10 100
+    default 60
+    help
+        Animation scheduling target, not a measured panel refresh rate.
+endmenu
+
+menu "Ye Wi-Fi sharing"
+config YE_ROUTER_TCP_MSS
+    int "Maximum forwarded TCP MSS"
+    range 536 1460
+    default 1360
+    help
+        Clamp existing MSS options in IPv4 SYN/SYN-ACK to reduce path-MTU stalls.
+        This does not change the MTU or datagram size of a UDP VPN transport.
+config YE_NAPT_UDP_TIMEOUT_SECONDS
+    int "UDP NAT idle timeout (seconds)"
+    range 10 600
+    default 120
+    help
+        Keep idle UDP mappings for proxy/VPN transports. The SDK default is 2s.
+        Longer timeouts retain more mappings; check the NAPT capacity counters.
+config YE_NAPT_CAPACITY
+    int "Maximum shared IPv4 connections"
+    range 128 1024
+    default 512
+    help
+        NAPT shares TCP/UDP/ICMP mappings between all hotspot clients.
+        A full table can evict an established TCP connection and send RST.
+        512 entries use about 8 KiB more RAM than the earlier 256-entry limit.
+config YE_NAPT_TCP_TRANSIENT_SECONDS
+    int "TCP unfinished/closed NAT idle timeout (seconds)"
+    range 5 120
+    default 15
+    help
+        Reclaim idle handshakes, reset connections and fully acknowledged FIN
+        connections sooner than the SDK default TCP_MSL (60s).
+        Established active TCP connections keep the original 30-minute idle timeout.
+config YE_WIFI_HT40
+    bool "Allow 40 MHz Wi-Fi bandwidth"
+    default y
+    help
+        Allow HT40 on station and SoftAP, retaining 802.11b/g/n compatibility.
+        Actual bandwidth depends on peer negotiation and the upstream channel.
+        Disable this option to use HT20 in crowded 2.4 GHz environments.
+endmenu

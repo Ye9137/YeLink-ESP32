@@ -1,0 +1,6 @@
+# Copyright (c) 2026 Ye
+# 保留原 NVS/PHY 地址，2MB Flash 内为 Wi-Fi + TLS 固件提供更大的单应用分区。
+# Name, Type, SubType, Offset, Size
+nvs, data, nvs, 0x9000, 0x6000
+phy_init, data, phy, 0xf000, 0x1000
+factory, app, factory, 0x10000, 0x1f0000
